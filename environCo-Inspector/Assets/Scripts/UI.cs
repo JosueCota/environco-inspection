@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
 
     [SerializeField] float timeRemaining = 30f;
     [SerializeField] TextMeshProUGUI timer;
-
+    [SerializeField] string sceneChange;
     bool isFinished = false;
 
 
@@ -21,8 +21,6 @@ public class UI : MonoBehaviour
 
     void Update()
     {
-
-
         if (!isFinished)
         {
             timeRemaining -= Time.deltaTime;
@@ -38,7 +36,7 @@ public class UI : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("MiniGame2");
+            SceneManager.LoadScene(sceneChange);
         }
 
     }
@@ -49,10 +47,4 @@ public class UI : MonoBehaviour
 
         return string.Format("{0}", seconds);
     }
-
-    private void changeScene()
-    {
-
-    }
-
 }
