@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class UI : MonoBehaviour
         }
         else
         {
-            changeScene();
+            SceneManager.LoadScene("MiniGame2");
         }
 
     }
