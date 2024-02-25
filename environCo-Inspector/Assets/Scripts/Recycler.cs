@@ -10,9 +10,10 @@ public class Recycler : MonoBehaviour
     {   // Recycle layer = 10
         if (col.collider.gameObject.layer == 10 && isRecycler )
         {
-            Debug.Log("Hitting recycle");
             Destroy(col.gameObject);
-        } else if (col.collider.gameObject.layer == 11 && !isRecycler)
+        }
+
+        else if (col.collider.gameObject.layer == 11 && !isRecycler)
         {
             Destroy(col.gameObject);
         }
