@@ -206,8 +206,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7435130227117906922, guid: 0be37e60d424193478d98b31c0259f4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 21266475}
+    - targetCorrespondingSourceObject: {fileID: 3009723225662775110, guid: 0be37e60d424193478d98b31c0259f4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 21266476}
   m_SourcePrefab: {fileID: 100100000, guid: 0be37e60d424193478d98b31c0259f4a, type: 3}
+--- !u!1 &21266473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7435130227117906922, guid: 0be37e60d424193478d98b31c0259f4a, type: 3}
+  m_PrefabInstance: {fileID: 21266472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &21266474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3009723225662775110, guid: 0be37e60d424193478d98b31c0259f4a, type: 3}
+  m_PrefabInstance: {fileID: 21266472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &21266475
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21266473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cb17df0cfa89a842a74ab8255d84e66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &21266476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21266474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ab5a404e963434b9ec5b06a2f29ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467266024
 GameObject:
   m_ObjectHideFlags: 0
