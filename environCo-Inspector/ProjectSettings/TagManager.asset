@@ -7,6 +7,8 @@ TagManager:
   - Draggable
   - Recycle
   - Trash
+  - Turnable
+  - FixedDrag
   layers:
   - Default
   - TransparentFX

@@ -32,7 +32,7 @@ public class InputHandler : MonoBehaviour
             }
             else if (rayHit.collider && rayHit.collider.CompareTag("FixedDrag"))
             {
-                FixedDrag();
+                selectedObject = rayHit.collider.gameObject;
             }
         }
         else if (context.canceled)
@@ -66,6 +66,12 @@ public class InputHandler : MonoBehaviour
         if (selectedObject != null && selectedObject.CompareTag("Draggable"))
         {
             Drag();
+        } else if (selectedObject != null && selectedObject.CompareTag("Turnable")) 
+        {
+            Turn();
+        } else if (selectedObject != null && selectedObject.CompareTag("FixedDrag"))
+        {
+            FixedDrag();
         }
 
     }
