@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    
     private Camera mainCamera;
     private GameObject selectedObject;
     private Vector2 offSet;
@@ -28,7 +27,7 @@ public class InputHandler : MonoBehaviour
             }
             else if (rayHit.collider && rayHit.collider.CompareTag("Turnable"))
             {
-                               
+                selectedObject = rayHit.collider.gameObject;
             }
             else if (rayHit.collider && rayHit.collider.CompareTag("FixedDrag"))
             {
@@ -58,7 +57,16 @@ public class InputHandler : MonoBehaviour
 
     public void Turn()
     {
-        
+        if (selectedObject.GetComponent<FaucetScript>().canMove)
+        {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 direction = new Vector2(mousePosition.x - selectedObject.transform.position.x, mousePosition.y - selectedObject.transform.position.y);
+        selectedObject.transform.up = new Vector2((direction.x), direction.y);
+        }
+        else{
+            selectedObject = null;
+        }
     }
 
     public void Update()
@@ -72,7 +80,6 @@ public class InputHandler : MonoBehaviour
         } else if (selectedObject != null && selectedObject.CompareTag("FixedDrag"))
         {
             FixedDrag();
-        }
-
+        } 
     }
 }
