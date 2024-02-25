@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FaucetScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip sound;
     [SerializeField]
     Rigidbody2D rigidBody2D;
     private float rotation;
@@ -16,6 +17,7 @@ public class FaucetScript : MonoBehaviour
         if (Mathf.Abs(transform.rotation.z) >= .9999 && canMove){
             Debug.Log("FREEZE");
             canMove = false;
+            SoundManager.instance.PlaySound(sound);
         }
     }
 }
