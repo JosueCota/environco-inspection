@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -466.48, y: -248.11}
+  m_AnchoredPosition: {x: -466.48, y: -248.27}
   m_SizeDelta: {x: 27.7861, y: 8.9254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9327206
@@ -1902,6 +1902,10 @@ PrefabInstance:
       propertyPath: textColor.r
       value: 0.15737103
       objectReference: {fileID: 0}
+    - target: {fileID: 380174922736288381, guid: 0d5ea9c325e891f43b65afce7a9741b2, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: -427277924, guid: 722e68dedeb6c49299d2a8d5b00c4441, type: 3}
     - target: {fileID: 5200401873143866829, guid: 0d5ea9c325e891f43b65afce7a9741b2, type: 3}
       propertyPath: m_Name
       value: UI Prefab
@@ -2022,6 +2026,10 @@ PrefabInstance:
       propertyPath: timeRemaining
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8232987190159377700, guid: 0d5ea9c325e891f43b65afce7a9741b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -427277924, guid: 722e68dedeb6c49299d2a8d5b00c4441, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
