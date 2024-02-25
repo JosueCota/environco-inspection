@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: sceneChange
       value: Minigame2
       objectReference: {fileID: 0}
+    - target: {fileID: 8190426253043957902, guid: 0d5ea9c325e891f43b65afce7a9741b2, type: 3}
+      propertyPath: timeRemaining
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
