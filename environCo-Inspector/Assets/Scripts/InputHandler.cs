@@ -30,6 +30,10 @@ public class InputHandler : MonoBehaviour
             {
                                
             }
+            else if (rayHit.collider && rayHit.collider.CompareTag("FixedDrag"))
+            {
+                FixedDrag();
+            }
         }
         else if (context.canceled)
         {
@@ -43,6 +47,13 @@ public class InputHandler : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         selectedObject.transform.position = mousePosition - offSet;
         Debug.Log("Dragging");
+    }
+
+    public void FixedDrag()
+    {
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        selectedObject.transform.position = new Vector2(selectedObject.transform.position.x, mousePosition.y - offSet.y);
+        Debug.Log("fixed drag");
     }
 
     public void Turn()
