@@ -9,12 +9,18 @@ public class FinalCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         sticks += 1;
+        StartCoroutine(Delay());
     }
 
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1f);
+    }
     private void Update()
     {
         if (sticks == 3)
         {
+            Delay();
             SceneManager.LoadScene("StartScreen");
         }
     }
