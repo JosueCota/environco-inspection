@@ -21,7 +21,7 @@ public class InputHandler : MonoBehaviour
         {
             var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
 
-            if (rayHit.collider)
+            if (rayHit.collider && rayHit.collider.CompareTag("Draggable"))
             {
                 Debug.Log(rayHit.collider.gameObject.name);
                 selectedObject = rayHit.collider.gameObject;
