@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
+    
     private Camera mainCamera;
     private GameObject selectedObject;
-
     private Vector2 offSet;
 
     private void Awake()
@@ -23,9 +23,12 @@ public class InputHandler : MonoBehaviour
 
             if (rayHit.collider && rayHit.collider.CompareTag("Draggable"))
             {
-                Debug.Log(rayHit.collider.gameObject.name);
                 selectedObject = rayHit.collider.gameObject;
                 offSet = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)selectedObject.transform.position;
+            }
+            else if (rayHit.collider && rayHit.collider.CompareTag("Turnable"))
+            {
+                               
             }
         }
         else if (context.canceled)
@@ -42,11 +45,17 @@ public class InputHandler : MonoBehaviour
         Debug.Log("Dragging");
     }
 
+    public void Turn()
+    {
+        
+    }
+
     public void Update()
     {
-        if (selectedObject != null)
+        if (selectedObject != null && selectedObject.CompareTag("Draggable"))
         {
             Drag();
         }
+
     }
 }
